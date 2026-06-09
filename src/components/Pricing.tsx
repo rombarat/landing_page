@@ -40,7 +40,7 @@ export function Pricing() {
               </div>
             </div>
 
-            <div className="mt-10">
+            <div className="mt-10 flex justify-center lg:justify-start">
               <LinkButton
                 href={whatsappLink('היי, אשמח לפרטים על הצעת ההשקה לדף נחיתה')}
                 variant="whatsapp"

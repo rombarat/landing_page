@@ -32,14 +32,16 @@ export function Hero() {
         </p>
 
         {/* Price callout */}
-        <div className="mt-10 inline-flex items-baseline gap-3 rounded-full border border-line2 bg-surface/60 backdrop-blur px-5 py-2.5">
-          <span className="text-sm text-muted">מחיר השקה</span>
-          <span className="font-display font-bold text-gold text-xl">{config.launchPrice}</span>
-          <span className="text-sm text-muted">בלבד</span>
+        <div className="mt-10 flex justify-center lg:justify-start">
+          <div className="inline-flex items-baseline gap-3 rounded-full border border-line2 bg-surface/60 backdrop-blur px-5 py-2.5">
+            <span className="text-sm text-muted">מחיר השקה</span>
+            <span className="font-display font-bold text-gold text-xl">{config.launchPrice}</span>
+            <span className="text-sm text-muted">בלבד</span>
+          </div>
         </div>
 
         {/* CTA */}
-        <div className="mt-10">
+        <div className="mt-10 flex justify-center lg:justify-start">
           <LinkButton
             href={whatsappLink()}
             variant="whatsapp"
