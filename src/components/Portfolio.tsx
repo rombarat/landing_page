@@ -3,7 +3,7 @@ import { ExternalLinkIcon } from './icons'
 const projects = [
   {
     name: 'טעמי שמחה',
-    category: 'קייטרינג בשרי מהודר',
+    category: 'קייטרינג בשרי',
     image: '/images/simcha.png',
     url: 'https://simcha-keitering.vercel.app/',
   },
@@ -15,13 +15,13 @@ const projects = [
   },
   {
     name: 'TLV Young',
-    category: 'קהילה לצעירים בתל אביב',
+    category: 'קהילה לצעירים',
     image: '/images/yael.png',
     url: 'https://yael-website.vercel.app/',
   },
   {
     name: 'אניס מטבחים',
-    category: 'מטבחי יוקרה בהתאמה אישית',
+    category: 'מטבחי יוקרה',
     image: '/images/anis.png',
     url: 'https://anis-kitchens.vercel.app/',
   },
@@ -32,13 +32,13 @@ export function Portfolio() {
     <section id="portfolio" className="section-y bg-surface border-y border-line">
       <div className="container-page">
         <div className="gold-rule">
-          <span className="text-sm text-gold font-display font-medium">העבודות האחרונות שלי</span>
+          <span className="text-sm text-gold font-display font-medium">תיק עבודות</span>
         </div>
 
         <h2 className="mt-6 text-huge font-bold font-display leading-[1.03] tracking-tighter max-w-4xl">
-          לא רק הבטחות.
+          כמה עבודות
           <br />
-          <span className="text-muted">לחצו ותראו איך זה נראה במציאות.</span>
+          <span className="text-muted">לדוגמה.</span>
         </h2>
 
         <div className="mt-16 lg:mt-20 grid gap-10 lg:gap-14 sm:grid-cols-2">

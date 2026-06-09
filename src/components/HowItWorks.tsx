@@ -1,21 +1,20 @@
 const steps = [
   {
     n: '01',
-    title: 'פנייה ושיחת היכרות',
-    body:
-      'שולחים הודעה קצרה בוואטסאפ ועושים שיחה של רבע שעה. אני מבין מה העסק עושה, מי קהל היעד, ולמה כדאי לו לבחור בך.',
+    title: 'שולחים הודעה',
+    body: 'מספרים לי בקצרה על העסק.',
   },
   {
     n: '02',
-    title: 'אפיון קצר',
+    title: 'אני בונה את הדף',
     body:
-      'אתם מעבירים לי חומרים שיש לכם (לוגו, תמונות). מה שאין — אני מנסח וכותב. הכל קורה מהר, בלי שאלונים מייגעים של 40 שאלות.',
+      'אתם שולחים תמונות, לוגו או כל חומר קיים. אם צריך עזרה בכתיבה — אני עוזר גם בזה.',
   },
   {
     n: '03',
-    title: 'הדף באוויר',
+    title: 'עולים לאוויר',
     body:
-      'תוך 3 ימי עסקים אתם מקבלים קישור. עוברים עליו יחד, מדייקים מה שצריך (עד 2 סבבי תיקונים), מחברים דומיין ועולים לאוויר.',
+      'בתוך 3 ימי עסקים הדף מוכן. עוברים עליו יחד, עושים התאמות אחרונות ומעלים אותו.',
   },
 ]
 
@@ -24,13 +23,11 @@ export function HowItWorks() {
     <section id="process" className="section-y bg-page">
       <div className="container-page">
         <div className="gold-rule">
-          <span className="text-sm text-gold font-display font-medium">איך זה עובד</span>
+          <span className="text-sm text-gold font-display font-medium">התהליך</span>
         </div>
 
         <h2 className="mt-6 text-huge font-bold font-display leading-[1.03] tracking-tighter max-w-4xl">
-          שלושה צעדים פשוטים,
-          <br />
-          <span className="text-muted">והדף שלך באוויר.</span>
+          איך זה עובד?
         </h2>
 
         <ol className="mt-16 lg:mt-20 divide-y divide-line border-y border-line">

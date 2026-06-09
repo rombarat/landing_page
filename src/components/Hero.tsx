@@ -1,5 +1,5 @@
 import { LinkButton } from './ui/Button'
-import { WhatsAppIcon, ArrowLeftIcon } from './icons'
+import { WhatsAppIcon } from './icons'
 import { whatsappLink, config } from '../config'
 
 export function Hero() {
@@ -8,54 +8,38 @@ export function Hero() {
       <div aria-hidden="true" className="absolute inset-0 spotlight" />
 
       <div className="container-page relative pt-20 pb-24 sm:pt-28 sm:pb-32 lg:pt-32 lg:pb-36">
-        {/* Status pill */}
-        <div className="inline-flex items-center gap-2.5 rounded-full border border-line2 bg-surface/60 backdrop-blur px-4 py-2 text-sm text-ink2">
-          <span className="relative flex h-1.5 w-1.5">
-            <span className="absolute inset-0 rounded-full bg-wa opacity-75 animate-ping" />
-            <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-wa" />
-          </span>
-          זמין לפרויקטים חדשים השבוע
-        </div>
-
         {/* MEGA headline */}
-        <h1 className="mt-10 text-mega font-bold font-display text-ink max-w-[18ch]">
-          דפי נחיתה
+        <h1 className="text-mega font-bold font-display text-ink max-w-[18ch]">
+          עסק טוב צריך להיראות
           <br />
-          <span className="text-muted">שעובדים</span>{' '}
-          <span className="text-gold">בשבילך.</span>
+          <span className="text-muted">כמו </span>
+          <span className="text-gold">עסק טוב.</span>
         </h1>
 
-        <div className="mt-12 lg:mt-16 grid lg:grid-cols-12 gap-10 items-end">
-          <p className="lg:col-span-6 text-lg sm:text-xl text-ink2 leading-relaxed max-w-xl">
-            לעסקים קטנים ובינוניים בישראל. מהירים, נראים מעולה בנייד,
-            ומביאים את הלקוחות ישר לוואטסאפ שלך.
-          </p>
+        <p className="mt-8 text-xl sm:text-2xl text-ink2 font-display font-medium max-w-2xl leading-snug">
+          אתר מקצועי לעסק שלך.
+          <br />
+          בלי להסתבך. בלי להוציא אלפי שקלים.
+        </p>
 
-          {/* Stats row */}
-          <dl className="lg:col-span-6 grid grid-cols-3 gap-6 lg:gap-8 lg:justify-self-end lg:max-w-md w-full">
-            <div className="gold-rule">
-              <dd className="font-display text-3xl sm:text-4xl font-bold text-ink leading-none">
-                3
-              </dd>
-              <dt className="mt-2 text-sm text-muted">ימי עסקים</dt>
-            </div>
-            <div className="gold-rule">
-              <dd className="font-display text-3xl sm:text-4xl font-bold text-ink leading-none">
-                500<span className="text-muted">₪</span>
-              </dd>
-              <dt className="mt-2 text-sm text-muted">מחיר השקה</dt>
-            </div>
-            <div className="gold-rule">
-              <dd className="font-display text-3xl sm:text-4xl font-bold text-ink leading-none">
-                4<span className="text-gold">+</span>
-              </dd>
-              <dt className="mt-2 text-sm text-muted">דפים באוויר</dt>
-            </div>
-          </dl>
+        <p className="mt-10 text-lg text-ink2 leading-relaxed max-w-2xl">
+          אם העסק שלך עדיין מתנהל דרך הודעות וואטסאפ, פייסבוק או כרטיס ביקור דיגיטלי —
+          הגיע הזמן שיהיה לך מקום מקצועי שמציג אותך כמו שצריך.
+        </p>
+
+        <p className="mt-4 text-lg text-ink2 leading-relaxed max-w-2xl">
+          אני בונה דפי נחיתה לעסקים קטנים ובינוניים תוך {config.deliveryDays} בלבד.
+        </p>
+
+        {/* Price callout */}
+        <div className="mt-10 inline-flex items-baseline gap-3 rounded-full border border-line2 bg-surface/60 backdrop-blur px-5 py-2.5">
+          <span className="text-sm text-muted">מחיר השקה</span>
+          <span className="font-display font-bold text-gold text-xl">{config.launchPrice}</span>
+          <span className="text-sm text-muted">בלבד</span>
         </div>
 
-        {/* CTAs */}
-        <div className="mt-12 lg:mt-16 flex flex-col sm:flex-row gap-3 sm:gap-4">
+        {/* CTA */}
+        <div className="mt-10">
           <LinkButton
             href={whatsappLink()}
             variant="whatsapp"
@@ -65,11 +49,7 @@ export function Hero() {
             aria-label="פנייה בוואטסאפ"
           >
             <WhatsAppIcon className="h-5 w-5" />
-            דברו איתי בוואטסאפ
-          </LinkButton>
-          <LinkButton href="#contact" variant="secondary" size="lg">
-            להשארת פרטים
-            <ArrowLeftIcon className="h-4 w-4" />
+            שלחו לי הודעה בוואטסאפ
           </LinkButton>
         </div>
       </div>
