@@ -33,3 +33,17 @@ pnpm-debug.log*
 
 # claude code local settings
 .claude/settings.local.json
+
+# next.js
+.next
+next-env.d.ts
+out
+*.tsbuildinfo
+
+# local stack data
+.local
+.data
+
+# tests
+test-results
+playwright-report
