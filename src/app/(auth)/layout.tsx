@@ -16,7 +16,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
         <p className="font-display text-display-lg text-white">
           מעלים תמונה.
           <br />
-          <span className="text-turmeric">מקבלים חנות.</span>
+          מקבלים חנות.
         </p>
         <p className="mt-6 max-w-md text-lg text-white/75">
           המוצרים שלך, בחנות מעוצבת עם עגלה והזמנות לאיסוף עצמי. בלי מתכנת ובלי לגעת בקוד.

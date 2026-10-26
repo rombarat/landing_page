@@ -43,7 +43,7 @@ const subscribeHydration = () => () => {}
 export function CartProvider({ slug, children }: { slug: string; children: React.ReactNode }) {
   const hydrated = useSyncExternalStore(subscribeHydration, () => true, () => false)
   const [lines, setLines] = useState<CartLine[] | null>(null)
-  const current = lines ?? (hydrated ? readCart(slug) : [])
+  const current = useMemo(() => lines ?? (hydrated ? readCart(slug) : []), [lines, hydrated, slug])
 
   const persist = useCallback(
     (next: CartLine[]) => {

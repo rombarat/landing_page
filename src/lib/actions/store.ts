@@ -97,7 +97,7 @@ const detailsSchema = z.object({
   accepting_orders: z.boolean(),
 })
 
-export async function updateStoreDetails(input: z.input<typeof detailsSchema>): Promise<ActionResult> {
+export async function updateStoreDetails(input: Omit<z.input<typeof detailsSchema>, "category"> & { category: string }): Promise<ActionResult> {
   const parsed = detailsSchema.safeParse(input)
   if (!parsed.success) return fail(parsed.error.issues[0]!.message)
   const d = parsed.data

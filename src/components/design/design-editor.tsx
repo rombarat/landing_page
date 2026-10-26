@@ -342,8 +342,8 @@ function TemplateOption({ template, selected, onSelect, sample, name, colors }: 
     >
       <span className="relative block h-24 w-32 shrink-0 overflow-hidden rounded-md" style={{ background: tpl.tokens.bg }} aria-hidden>
         {template === 'bold' && <span className="absolute inset-x-0 top-0 h-4" style={{ background: colors.primary }} />}
-        <span className="absolute start-2 top-5 text-[13px] leading-none" style={{ fontFamily: font.display, fontWeight: font.displayWeight, color: template === 'artisan' ? colors.primary : tpl.tokens.text }}>
-          {name.slice(0, 12) || 'החנות שלי'}
+        <span className="absolute start-2 end-2 top-5 truncate text-[13px] leading-none" style={{ fontFamily: font.display, fontWeight: font.displayWeight, color: template === 'artisan' ? colors.primary : tpl.tokens.text }}>
+          {name || 'החנות שלי'}
         </span>
         <span
           className="absolute bottom-2 end-2 block h-12 w-12 overflow-hidden"

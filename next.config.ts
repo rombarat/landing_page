@@ -11,6 +11,7 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  devIndicators: false,
   serverExternalPackages: ['sharp', 'postgres'],
   async headers() {
     return [{ source: '/:path*', headers: securityHeaders }]
