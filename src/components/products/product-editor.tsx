@@ -413,6 +413,7 @@ export function ProductEditor({ initialProducts, initialCategories, mode, aiEnab
         className="sr-only"
         tabIndex={-1}
         data-testid="product-files"
+        aria-label="בחירת תמונות מוצרים"
         onChange={(e) => {
           if (e.target.files) addFiles(e.target.files)
           e.target.value = ''
@@ -757,6 +758,7 @@ function ProductCard(props: CardProps) {
       )}
       <input
         ref={photoInput}
+        aria-label="הוספת תמונות למוצר"
         type="file"
         accept="image/*,.heic,.heif"
         multiple

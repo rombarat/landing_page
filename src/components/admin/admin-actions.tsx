@@ -16,8 +16,12 @@ export function AdminActions({ userId, storeId, suspended, effective }: { userId
   const [message, setMessage] = useState<string | null>(null)
   const run = (fn: () => Promise<{ ok: boolean; error?: string }>, done: string) =>
     startTransition(async () => {
-      const res = await fn()
-      setMessage(res.ok ? done : (res.error ?? 'נכשל'))
+      try {
+        const res = await fn()
+        setMessage(res.ok ? done : (res.error ?? 'נכשל'))
+      } catch {
+        setMessage('הפעולה נכשלה. פרטים ביומן השרת.')
+      }
     })
   return (
     <div className="flex max-w-xs flex-wrap gap-1.5">

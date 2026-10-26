@@ -80,7 +80,7 @@ export async function adminExpireTrial(userId: string): Promise<ActionResult> {
   if (!id.success) return fail('בקשה לא תקינה')
   const slug = await asService(async (tx) => {
     await tx`update public.subscriptions set status = 'trialing', updated_by = ${admin.sub},
-               trial_started_at = coalesce(trial_started_at, now() - interval '8 days'),
+               trial_started_at = least(trial_started_at, now() - interval '7 days 1 minute'),
                trial_ends_at = now() - interval '1 minute'
              where user_id = ${id.data} and trial_started_at is not null`
     const store = await storeOf(tx, id.data)

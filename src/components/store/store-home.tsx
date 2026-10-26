@@ -39,7 +39,8 @@ export function StoreHome({ payload, basePath }: { payload: StorePayload; basePa
   // Small catalogs show everything on the home page so the store never looks empty.
   const showAll = products.length <= 12
   const homeProducts = showAll ? products : (featured.length >= 4 ? featured : products).slice(0, 8)
-  const aboutText = settings.about_text || store.description
+  // The hero already carries the description; the about block shows only dedicated text.
+  const aboutText = settings.about_text
 
   return (
     <>
@@ -101,7 +102,7 @@ export function StoreHome({ payload, basePath }: { payload: StorePayload; basePa
       )}
 
       <section id="products" className="mx-auto max-w-6xl scroll-mt-20 px-4 pt-14 sm:px-6">
-        <div className={cn('mb-8 flex flex-wrap items-end gap-4', tpl === 'boutique' ? 'flex-col items-center' : 'justify-between')}>
+        <div className={cn('mb-8 flex flex-wrap gap-4', tpl === 'boutique' ? 'flex-col items-center' : 'items-end justify-between')}>
           <h2 className="st-section-title st-display">{showAll ? 'המוצרים' : featured.length >= 4 ? 'מומלצים' : 'מהחנות'}</h2>
           {!showAll && (
             <Link href={`${basePath}/catalog`} className="text-sm font-semibold underline-offset-4 hover:underline">

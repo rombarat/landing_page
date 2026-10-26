@@ -117,6 +117,9 @@ export function DesignEditor({ settings, storeName, logoPath: initialLogo, sampl
       </div>
 
       <div className={cn('space-y-8', mobileTab === 'preview' && 'hidden lg:block')}>
+        <div className="lg:hidden">
+          <SaveBadge state={saveState} />
+        </div>
         {error && <Notice tone="danger">{error}</Notice>}
 
         <section aria-labelledby="tpl-heading">
@@ -315,6 +318,7 @@ function BrandImageControl({ path, uploading, onFile, onRemove, hint, round }: {
       </div>
       <input
         ref={input}
+        aria-label="בחירת תמונה"
         type="file"
         accept="image/*,.heic,.heif"
         className="sr-only"

@@ -134,7 +134,6 @@ function StoreFooter({ payload }: { payload: StorePayload }) {
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:grid-cols-2 sm:px-6">
         <div>
           <p className="st-display text-2xl">{store.name}</p>
-          {store.description && <p className="st-muted mt-2 max-w-sm text-sm leading-relaxed">{store.description}</p>}
         </div>
         <ContactList payload={payload} />
       </div>
