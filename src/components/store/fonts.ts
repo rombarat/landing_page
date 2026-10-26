@@ -1,0 +1,16 @@
+// Storefront font presets. @font-face rules are cheap; browsers download only
+// the families a store actually renders.
+import '@fontsource/bellefair/400.css'
+import '@fontsource/assistant/400.css'
+import '@fontsource/assistant/600.css'
+import '@fontsource/assistant/700.css'
+import '@fontsource/suez-one/400.css'
+import '@fontsource/varela-round/400.css'
+import '@fontsource/rubik/400.css'
+import '@fontsource/rubik/500.css'
+import '@fontsource/rubik/700.css'
+import '@fontsource/rubik/800.css'
+import '@fontsource/frank-ruhl-libre/400.css'
+import '@fontsource/frank-ruhl-libre/500.css'
+import '@fontsource/frank-ruhl-libre/700.css'
+import './store.css'

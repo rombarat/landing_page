@@ -25,6 +25,7 @@ writeFileSync(
     `SUPABASE_SERVICE_ROLE_KEY=${sign('service_role')}`,
     'DATABASE_URL=postgres://postgres:postgres@127.0.0.1:54322/postgres',
     'STORAGE_DRIVER=local',
+    'NEXT_PUBLIC_MEDIA_BASE_URL=/api/storage',
     `ORDER_IP_SALT=${randomBytes(24).toString('hex')}`,
     '',
   ].join('\n'),
